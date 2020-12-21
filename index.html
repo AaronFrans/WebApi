@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Weather</title>
+    <link rel="stylesheet" href="Styles/index.css" />
+  </head>
+  <body>
+    <div style="padding-bottom: 5px;" id="searchBar">
+      <form onsubmit="return false;">
+        <input type="text" id="locationIn" placeholder="Locatie" />
+        <button id="searchButton">Zoek</button>
+      </form>
+    </div>
+    <div id="weatherNow">
+      <p>Nu</p>
+      <table id="weatherNowTable">
+        <tr>
+          <td rowspan="2" style="width: 5%; text-align: left">
+            <img src="" id="weatherNowIcon" />
+          </td>
+          <td style="width: 25%; text-align: left">
+            <span id="weatherNowLocationName"></span>
+          </td>
+          <td rowspan="2" style="width: 70%; text-align: right">
+            <span id="weatherNowTemp"></span>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: auto; text-align: left">
+            <span id="weatherNowLastUpdated"></span>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div id="forecast">
+      <p>Voorspelling</p>
+      <ul id="forecastList"></ul>
+    </div>
+    <div>
+      <p>Uitgebrijde informatie</p>
+      <div id="extraInfo"></div>
+    </div>
+    <script src="Scripts/index.js" async defer></script>
+  </body>
+</html>
